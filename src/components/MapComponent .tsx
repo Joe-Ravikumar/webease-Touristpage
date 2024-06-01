@@ -1,37 +1,34 @@
-"use client";
 import React, { useEffect, useRef } from "react";
-import mapboxgl, { Map } from "mapbox-gl";
+import mapboxgl from "mapbox-gl";
 
-interface Route {
-  longitude: number;
-  latitude: number;
+mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
+
+interface Props {
+  tourRoutes: { latitude: number; longitude: number; title: string }[];
 }
 
-interface MapComponentProps {
-  tourRoutes: Route[];
-}
-
-const MapComponent: React.FC<MapComponentProps> = ({ tourRoutes }) => {
+const MapComponent: React.FC<Props> = ({ tourRoutes }) => {
   const mapContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const map: Map = new mapboxgl.Map({
-      container: mapContainer.current!,
-      style: "mapbox://styles/mapbox/streets-v11",
-      center: [0, 0], // Adjust based on your default location
-      zoom: 9,
-    });
+    if (mapContainer.current) {
+      const map = new mapboxgl.Map({
+        container: mapContainer.current,
+        style: "mapbox://styles/mapbox/streets-v11",
+        center: [tourRoutes[0].longitude, tourRoutes[0].latitude],
+        zoom: 9,
+      });
 
-    tourRoutes.forEach((route: Route) => {
-      new mapboxgl.Marker()
-        .setLngLat([route.longitude, route.latitude])
-        .addTo(map);
-    });
-
-    return () => map.remove();
+      tourRoutes.forEach((route) => {
+        new mapboxgl.Marker()
+          .setLngLat([route.longitude, route.latitude])
+          .setPopup(new mapboxgl.Popup().setText(route.title))
+          .addTo(map);
+      });
+    }
   }, [tourRoutes]);
 
-  return <div ref={mapContainer} className="h-96 w-full" />;
+  return <div className="h-96 w-full" ref={mapContainer}></div>;
 };
 
 export default MapComponent;
