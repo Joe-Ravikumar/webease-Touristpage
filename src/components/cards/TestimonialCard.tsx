@@ -9,15 +9,15 @@ const TestimonialCard: React.FC<Props> = (props) => {
 
   return (
     // JSX code for your component's UI goes here
-<>
+    <>
       {/*      <!-- Component: Elevated base sized testimonial with avatar and rating stars --> */}
       <div className="overflow-hidden bg-white rounded-xl shadow-md text-slate-500 shadow-blue-100">
         <div className="relative p-6">
           <figure className="relative z-10">
             <blockquote className="p-6 text-lg leading-relaxed">
               <p>
-                Web-Ease, is probably one of the best libraries Ive came across.
-                Good looking, easy to use and above all super accessible.
+                This trip was absolutely amazing! The guides were knowledgeable,
+                and the scenery was breathtaking. Highly recommend!"
               </p>
             </blockquote>
             <figcaption className="flex flex-col items-start gap-2 p-6 pt-0 text-sm text-emerald-500">

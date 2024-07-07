@@ -1,6 +1,6 @@
-'use client';
-import React, { useEffect, useRef, useState } from 'react';
-import { useSpring, animated } from 'react-spring';
+"use client";
+import React, { useEffect, useRef, useState } from "react";
+import { useSpring, animated } from "react-spring";
 
 function NumberSpring({ n }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,7 +35,7 @@ function NumberSpring({ n }) {
 
   return (
     <animated.div ref={ref}>
-      {props.number.to(n => n.toFixed(0))}
+      {props.number.to((n) => n.toFixed(0))}
     </animated.div>
   );
 }

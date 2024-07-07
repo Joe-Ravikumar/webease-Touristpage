@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Historical Landmarks Tour",
+    "description": "Discover the most famous historical landmarks in the world.",
+    "image": "/images/historical_landmark.jpg",
+    "link": "https://www.srilanka.travel/"
+  },
+  {
+    "title": "Natural Wonders Exploration",
+    "description": "Explore the breathtaking natural wonders.",
+    "image": "/images/natural_wonder.jpg",
+    "link": "https://www.sltda.gov.lk/en"
+  },
+  {
+    "title": "Cultural Hotspots Experience",
+    "description": "Immerse yourself in the vibrant cultures.",
+    "image": "/images/cultural_hotspot.jpg",
+    "link": "https://www.srilanka.travel/essence"
+  },
+  {
+    "title": "Adventure Tours",
+    "description": "Thrilling adventures for the adventurous at heart.",
+    "image": "/images/adventure_tour.jpg",
+    "link": "https://www.lovesrilanka.org/"
+  },
+  {
+    "title": "Relaxation Retreats",
+    "description": "Unwind and rejuvenate in serene environments.",
+    "image": "/images/relaxation_retreat.jpg",
+    "link": "https://www.srilankatourismalliance.com/"
+  }
+]

@@ -196,7 +196,7 @@ const ContactForm: React.FC = () => {
                   />
                 </svg>
                 <div className="ml-4 text-md tracking-wide font-semibold w-full">
-                  <div>+94 76 528 9313,</div>
+                  <div>+94 71 535 1014</div>
                 </div>
               </div>
 
@@ -218,7 +218,7 @@ const ContactForm: React.FC = () => {
                   />
                 </svg>
                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                  webEase@gmail.com
+                  webEasetourist@gmail.com
                 </div>
               </div>
             </div>

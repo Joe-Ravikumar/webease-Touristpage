@@ -1,13 +1,22 @@
+// TwoLineTitle.tsx
 import React from "react";
+import classNames from "classnames";
 
-const TwoLineTitle: React.FC<{ main: string; des: string }> = ({
+interface TwoLineTitleProps {
+  main: string;
+  des: string;
+  className?: string; // Add this line
+}
+
+const TwoLineTitle: React.FC<TwoLineTitleProps> = ({
   main,
   des,
+  className,
 }) => {
   return (
-    <div className="text-center my-8">
-      <h2 className="text-3xl font-bold">{main}</h2>
-      <p className="text-lg text-gray-600 mt-2">{des}</p>
+    <div className={classNames("text-center", className)}>
+      <h2 className="text-2xl font-bold">{main}</h2>
+      <p className="text-gray-600">{des}</p>
     </div>
   );
 };

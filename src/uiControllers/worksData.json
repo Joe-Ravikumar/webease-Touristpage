@@ -1,22 +1,24 @@
 [
   {
-    "title": "Golden Gate Bridge",
-    "description": "A famous suspension bridge connecting San Francisco Bay and the Pacific Ocean.",
-    "image": "/images/golden-gate.jpg"
+    "title": "Mountain Adventure",
+    "description": "Experience the thrill of mountain climbing and breathtaking views.",
+    "image": "/images/packages/mountain-adventure.jpg",
+    "link": "/packages/mountain-adventure",
+    "category": "Adventure"
   },
   {
-    "title": "Alcatraz Island",
-    "description": "A small island developed with facilities for a lighthouse, a military fortification, and a prison.",
-    "image": "/images/alcatraz.jpg"
+    "title": "Cultural Tour",
+    "description": "Explore the rich cultural heritage and traditions.",
+    "image": "/images/packages/cultural-tour.jpg",
+    "link": "/packages/cultural-tour",
+    "category": "Cultural"
   },
   {
-    "title": "Fisherman's Wharf",
-    "description": "A bustling waterfront area with shops, restaurants, and attractions.",
-    "image": "/images/fishermans-wharf.jpg"
-  },
-  {
-    "title": "Chinatown",
-    "description": "A historic area featuring vibrant markets, shops, and restaurants.",
-    "image": "/images/chinatown.jpg"
+    "title": "Beach Relaxation",
+    "description": "Relax at the serene beaches with top-notch amenities.",
+    "image": "/images/packages/relaxation_retreat.jpg",
+    "link": "/packages/beach-relaxation",
+    "category": "Relaxation"
   }
+  
 ]

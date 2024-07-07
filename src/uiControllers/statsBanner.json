@@ -1,26 +1,26 @@
 [
-    {
-        "name": "Main Title Here",
-        "description": "Subtitle Here",
-        "number": 100,
-        "icon": null
-    },
-    {
-        "name": "Main Title Here",
-        "description": "Subtitle Here",
-        "number": 100,
-        "icon": null
-    },
-    {
-        "name": "Main Title Here",
-        "description": "Subtitle Here",
-        "number": 50,
-        "icon": null
-    },
-    {
-        "name": "Main Title Here",
-        "description": "Subtitle Here",
-        "number": 50,
-        "icon": null
-    }
+  {
+    "name": "Tours",
+    "description": "Tour Plans",
+    "number": 10000,
+    "icon": null
+  },
+  {
+    "name": "Packages",
+    "description": "Customized Packages",
+    "number": 400,
+    "icon": null
+  },
+  {
+    "name": "Customers",
+    "description": "All around the world",
+    "number": 30000,
+    "icon": null
+  },
+  {
+    "name": "Places",
+    "description": "All around the world",
+    "number": 500,
+    "icon": null
+  }
 ]

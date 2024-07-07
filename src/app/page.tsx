@@ -27,16 +27,7 @@ export default function Home() {
           des="Explore our vibrant collection of artisanal goods and find the perfect piece to add a touch of elegance to your life."
         />
         <InfoSectionTypeOne />
-        <TwoLineTitle
-          main="Discover our Unique Services"
-          des="Explore our vibrant collection of artisanal goods and find the perfect piece to add a touch of elegance to your life."
-        />
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 xl:w-[1140px] 2xl:w-[1340px] pb-8 mx-4 md:mx-8 pt-0">
-          {/* Render four card components */}
-          {cards.map((card, index) => (
-            <CardTypeTwo key={index} {...card} />
-          ))}
-        </div>
+
         <NumberSpringBanner />
         <TwoLineTitle
           main="Discover our Previous Works"

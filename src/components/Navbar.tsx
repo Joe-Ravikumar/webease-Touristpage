@@ -89,9 +89,9 @@ const Navbar: React.FC = () => {
                   role="menuitem"
                   aria-haspopup="false"
                   className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-[#8781DB] focus:text-[#80BBFF] focus:outline-none focus-visible:outline-none lg:px-8"
-                  href="portfolio"
+                  href="/portfolio"
                 >
-                  <span>Portfolio</span>
+                  <span>Destination</span>
                 </a>
               </li>
               <li role="none" className="flex items-stretch">
@@ -170,13 +170,20 @@ const Navbar: React.FC = () => {
                 </button>
               </div>
               <div className="lex items-center hidden xl:flex">
-              <Button btnText="Get Started" border="none" borderColor="white" backgroundColor="#80BBFF" fontColor="white" click={handleLogin} />
+                <Button
+                  btnText="Get Started"
+                  border="none"
+                  borderColor="white"
+                  backgroundColor="#80BBFF"
+                  fontColor="white"
+                  click={handleLogin}
+                />
               </div>
               {/*        <!-- End Avatar --> */}
             </div>
           </nav>
         </div>
-        {showLogin && <Login  onClose={handleCloseLogin}  />}
+        {showLogin && <Login onClose={handleCloseLogin} />}
       </header>
       {/*<!-- End Navbar with Avatar--> */}
     </div>

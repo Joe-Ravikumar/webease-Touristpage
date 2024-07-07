@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Paris",
+    "description": "Experience the romance of Paris with its iconic landmarks and charming streets.",
+    "image": "/images/destinations/paris.jpg"
+  },
+  {
+    "name": "Tokyo",
+    "description": "Discover the vibrant culture and cutting-edge technology of Tokyo.",
+    "image": "/images/destinations/tokyo.jpg"
+  },
+  {
+    "name": "New York City",
+    "description": "Explore the bustling streets and diverse neighborhoods of New York City.",
+    "image": "/images/destinations/nyc.jpg"
+  },
+  {
+    "name": "London",
+    "description": "Immerse yourself in the history and culture of London's landmarks and museums.",
+    "image": "/images/destinations/london.jpg"
+  },
+  {
+    "name": "Rome",
+    "description": "Step back in time and explore the ancient ruins and art of Rome.",
+    "image": "/images/destinations/rome.jpg"
+  },
+  {
+    "name": "Sydney",
+    "description": "Enjoy the stunning beaches and vibrant city life of Sydney.",
+    "image": "/images/destinations/sydney.jpg"
+  },
+  {
+    "name": "Cape Town",
+    "description": "Experience the natural beauty and rich culture of Cape Town.",
+    "image": "/images/destinations/capetown.jpg"
+  },
+  {
+    "name": "Rio de Janeiro",
+    "description": "Celebrate life in Rio de Janeiro with its beautiful beaches and lively festivals.",
+    "image": "/images/destinations/riodejaneiro.jpg"
+  },
+  {
+    "name": "Bali",
+    "description": "Relax and rejuvenate in the tranquil beauty of Bali's beaches and resorts.",
+    "image": "/images/destinations/bali.jpg"
+  },
+  {
+    "name": "Dubai",
+    "description": "Experience luxury and adventure in the modern marvel of Dubai.",
+    "image": "/images/destinations/dubai.jpg"
+  },
+  {
+    "name": "Kyoto",
+    "description": "Discover the beauty and serenity of Kyoto's temples and gardens.",
+    "image": "/images/destinations/kyoto.jpg"
+  },
+  {
+    "name": "Venice",
+    "description": "Experience the charm of Venice with its picturesque canals and historic architecture.",
+    "image": "/images/destinations/venice.jpg"
+  },
+  {
+    "name": "Santorini",
+    "description": "Relax and unwind in the stunning beauty of Santorini's white-washed buildings and blue-domed churches.",
+    "image": "/images/destinations/santorini.jpg"
+  },
+  {
+    "name": "Amsterdam",
+    "description": "Explore the picturesque canals and vibrant culture of Amsterdam.",
+    "image": "/images/destinations/amsterdam.jpg"
+  },
+  {
+    "name": "Barcelona",
+    "description": "Experience the art, architecture, and vibrant culture of Barcelona.",
+    "image": "/images/destinations/barcelona.jpg"
+  },
+  {
+    "name": "Hong Kong",
+    "description": "Discover the bustling streets and vibrant markets of Hong Kong.",
+    "image": "/images/destinations/hongkong.jpg"
+  },
+  {
+    "name": "Machu Picchu",
+    "description": "Explore the ancient ruins of Machu Picchu and experience the beauty of the Andes Mountains.",
+    "image": "/images/destinations/machupicchu.jpg"
+  },
+  {
+    "name": "Istanbul",
+    "description": "Experience the rich history and culture of Istanbul's mosques, palaces, and bazaars.",
+    "image": "/images/destinations/istanbul.jpg"
+  },
+  {
+    "name": "Prague",
+    "description": "Discover the historic beauty and charm of Prague's medieval architecture and cobbled streets.",
+    "image": "/images/destinations/prague.jpg"
+  },
+  {
+    "name": "Vienna",
+    "description": "Experience the classical music, art, and architecture of Vienna.",
+    "image": "/images/destinations/vienna.jpg"
+  }
+]

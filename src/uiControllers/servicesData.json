@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Adventure Tour",
+    "description": "Join us on exciting adventures through scenic landscapes and thrilling activities.",
+    "image": "/images/services/adventure.jpg",
+    "link": "https://example.com/adventure"
+  },
+  {
+    "title": "Cultural Excursion",
+    "description": "Immerse yourself in the rich cultural heritage of our destinations with our curated excursions.",
+    "image": "/images/services/cultural.jpg",
+    "link": "https://example.com/cultural"
+  },
+  {
+    "title": "Relaxation Retreat",
+    "description": "Unwind and rejuvenate at our luxurious retreats designed for ultimate relaxation.",
+    "image": "/images/services/relaxation.jpg",
+    "link": "https://example.com/relaxation"
+  }
+]

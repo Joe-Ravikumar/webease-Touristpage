@@ -1,47 +1,40 @@
-import PageHeader from "@/components/pageheaders/PageHeader";
-import TwoLineTitle from "@/components/titles/TwoLineTitle";
+"use client";
 import React from "react";
-import services from "@/uiControllers/worksData.json";
-import CardTypeTwo from "@/components/cards/CardTypeTwo";
-import NumberSpringBanner from "@/components/banner/NumberSpringBanner";
+import PageHeader from "@/components/pageheaders/PageHeader";
+import destinations from "@/uiControllers/destinationsData.json";
+import { motion } from "framer-motion";
 
-const Portfolio: React.FC = () => {
+const Destinations: React.FC = () => {
   return (
     <div>
-      <PageHeader title="Destinations" />
-      <div className="flex flex-col items-center">
-        <TwoLineTitle
-          main="Historical Landmarks"
-          des="Discover the rich history and cultural heritage of our top historical landmarks."
-        />
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 xl:w-[1140px] 2xl:w-[1440px] pb-8 mx-4 md:mx-8 pt-0">
-          {services.map((card, index) => (
-            <CardTypeTwo key={index} {...card} />
+      <PageHeader title="Explore Destinations" />
+      <div className="container mx-auto py-8">
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Explore Our Destinations
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {destinations.map((destination, index) => (
+            <motion.div
+              key={index}
+              className="relative"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <img
+                src={destination.image}
+                alt={destination.name}
+                className="rounded-lg w-full h-40 object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-50 text-white">
+                <p className="text-sm font-medium">{destination.name}</p>
+                <p className="text-xs">{destination.description}</p>
+              </div>
+            </motion.div>
           ))}
         </div>
-        <TwoLineTitle
-          main="Natural Wonders"
-          des="Explore the breathtaking natural wonders that our destination has to offer."
-        />
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 xl:w-[1140px] 2xl:w-[1440px] pb-8 mx-4 md:mx-8 pt-0">
-          {services.map((card, index) => (
-            <CardTypeTwo key={index} {...card} />
-          ))}
-        </div>
-        <TwoLineTitle
-          main="Cultural Hotspots"
-          des="Immerse yourself in the vibrant culture and traditions at our must-visit cultural hotspots."
-        />
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 xl:w-[1140px] 2xl:w-[1440px] pb-8 mx-4 md:mx-8 pt-0">
-          {services.map((card, index) => (
-            <CardTypeTwo key={index} {...card} />
-          ))}
-        </div>
-
-        <NumberSpringBanner />
       </div>
     </div>
   );
 };
 
-export default Portfolio;
+export default Destinations;
