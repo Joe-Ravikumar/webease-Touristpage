@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Golden Gate Bridge",
+    "description": "A famous suspension bridge connecting San Francisco Bay and the Pacific Ocean.",
+    "image": "/images/golden-gate.jpg"
+  },
+  {
+    "title": "Alcatraz Island",
+    "description": "A small island developed with facilities for a lighthouse, a military fortification, and a prison.",
+    "image": "/images/alcatraz.jpg"
+  },
+  {
+    "title": "Fisherman's Wharf",
+    "description": "A bustling waterfront area with shops, restaurants, and attractions.",
+    "image": "/images/fishermans-wharf.jpg"
+  },
+  {
+    "title": "Chinatown",
+    "description": "A historic area featuring vibrant markets, shops, and restaurants.",
+    "image": "/images/chinatown.jpg"
+  }
+]
