@@ -26,8 +26,8 @@ const Destinations: React.FC = () => {
                 className="rounded-lg w-full h-40 object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-40 text-white">
-                <p className="text-sm font-medium">{destination.name}</p>
-                <p className="text-xs">{destination.description}</p>
+                <p className="text-sm text-white font-medium">{destination.name}</p>
+                <p className="text-xs text-slate-200">{destination.description}</p>
               </div>
             </motion.div>
           ))}

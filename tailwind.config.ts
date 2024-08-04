@@ -1,23 +1,28 @@
-import { Config } from "tailwindcss";
+import type { Config } from "tailwindcss";
+const colors = require('./src/data/colors.json');
 
 const config: Config = {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@nextui-org/react/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
       colors: {
-        primary: "#87ceeb",
-        secondary: "#ffffff",
-        accent: "#ff6f61",
-        foreground: "rgb(var(--foreground-rgb))",
-        backgroundStart: "rgb(var(--background-start-rgb))",
-        backgroundEnd: "rgb(var(--background-end-rgb))",
+        primary: colors.primary,
+        secondary: colors.secondary,
+        accent: colors.accent,
+        neutral: colors.neutral,
+        success: colors.success,
       },
     },
   },
   plugins: [],
 };
-
 export default config;

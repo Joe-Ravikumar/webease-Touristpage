@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import StoreProvider from "./StoreProvider";
+import { EdgeStoreProvider } from "@/lib/edgestore";
+import ToastMessageContainer from "@/components/ToastMessageContainer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,12 +20,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <Navbar />
-        <main className={inter.className}>{children}</main>
-        <Footer />
-      </body>
-    </html>
+    <StoreProvider>
+      <EdgeStoreProvider>
+        <html lang="en">
+          <body>
+            <Navbar />
+            <main className={inter.className}>{children}</main>
+            <ToastMessageContainer />
+            <Footer />
+          </body>
+        </html>
+      </EdgeStoreProvider>
+    </StoreProvider>
   );
 }
