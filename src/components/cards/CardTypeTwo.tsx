@@ -14,7 +14,7 @@ const CardTypeTwo: React.FC<CardTypeTwoProps> = ({
   link,
 }) => {
   return (
-    <div className="card shadow-lg rounded-lg overflow-hidden">
+    <div className="card shadow-lg bg-white rounded-lg overflow-hidden">
       <img
         src={image}
         alt={title}

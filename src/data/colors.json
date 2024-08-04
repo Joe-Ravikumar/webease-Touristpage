@@ -1,0 +1,27 @@
+{
+  "primary": {
+    "light": "#80BBFF",
+    "DEFAULT": "#1E40AF",
+    "dark": "#1E3A8A"
+  },
+  "secondary": {
+    "light": "#8781DB",
+    "DEFAULT": "#6c68ad",
+    "dark": "#4b4990"
+  },
+  "accent": {
+    "light": "#FFEDD5",
+    "DEFAULT": "#FDBA74",
+    "dark": "#FB923C"
+  },
+  "neutral": {
+    "light": "#F3F4F6",
+    "DEFAULT": "#9CA3AF",
+    "dark": "#4B5563"
+  },
+  "success": {
+    "light": "#D1FAE5",
+    "DEFAULT": "#10B981",
+    "dark": "#065F46"
+  }
+}

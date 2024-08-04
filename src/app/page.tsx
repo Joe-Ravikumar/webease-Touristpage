@@ -10,6 +10,7 @@ import GoogleMapComponent from "@/components/map/GoogleMap";
 import NumberSpringBanner from "@/components/banner/NumberSpringBanner";
 import worksData from "@/uiControllers/worksData.json";
 import CarosalTypeOne from "@/components/carosals/CarosalTypeOne";
+import ChatBox from "@/components/chat/ChatBox";
 
 export default function Home() {
   // Ensure cardData is an array
@@ -46,6 +47,7 @@ export default function Home() {
           <CarosalTypeOne />
         </div>
         <GoogleMapComponent />
+        <ChatBox />
       </div>
     </>
   );

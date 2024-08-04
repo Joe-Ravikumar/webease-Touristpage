@@ -11,7 +11,7 @@ const Packages: React.FC = () => {
       <PageHeader
         title="Travel Packages"
         subtitle="Explore our exclusive travel packages tailored for every type of traveler"
-        backgroundImage="/images/packages-header.jpg"
+        backgroundImage="/images/natural_wonder.jpg"
       />
       <div className="flex flex-col items-center py-8">
         <TwoLineTitle

@@ -1,0 +1,28 @@
+[
+    {
+      "description": "First set of uploaded files and images",
+      "uploadedFiles": [
+        { "name": "Doc1.pdf", "type": "file" },
+        { "name": "Doc2.pdf", "type": "file" }
+      ],
+      "uploadedImages": [
+        "https://via.placeholder.com/150",
+        "https://via.placeholder.com/150",
+        "https://via.placeholder.com/150"
+      ]
+    },
+    {
+      "description": "Second set of uploaded files and images",
+      "uploadedFiles": [
+        { "name": "Doc3.pdf", "type": "file" },
+        { "name": "Doc4.pdf", "type": "file" }
+      ],
+      "uploadedImages": [
+        "https://via.placeholder.com/150",
+        "https://via.placeholder.com/150",
+        "https://via.placeholder.com/150",
+        "https://via.placeholder.com/150"
+      ]
+    }
+  ]
+  

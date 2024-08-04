@@ -1,15 +1,26 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Button from "./button/Button";
 import Login from "./login/Login";
+import { useAppSelector } from "@/hooks/reduxHooks";
+import { useRouter } from "next/navigation";
+
 
 const Navbar: React.FC = () => {
   const [isToggleOpen, setIsToggleOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+  const user = useAppSelector((state) => state.auth.user);
+  const router = useRouter();
   const [showLogin, setShowLogin] = useState(false);
+
   const handleLogin = () => {
     setShowLogin(true);
   };
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const handleCloseLogin = () => {
     setShowLogin(false);
@@ -33,7 +44,7 @@ const Navbar: React.FC = () => {
                 className="flex items-center gap-2 whitespace-nowrap py-3 text-lg font-bold  focus:outline-none lg:flex-1"
                 href="/"
               >
-              Place Tricker
+                Place Tricker
               </a>
             </div>
             {/*      <!-- Mobile trigger --> */}
@@ -156,14 +167,35 @@ const Navbar: React.FC = () => {
               </a> */}
 
               <div className="lex items-center hidden xl:flex">
-                <Button
-                  btnText="Get Connect"
-                  border="none"
-                  borderColor="white"
-                  backgroundColor="#6b6e6c"
-                  fontColor="white"
-                  click={handleLogin}
-                />
+                <div className="lex items-center hidden xl:flex">
+                  {isClient && user ? (
+                    <div
+                      className="flex items-center gap-2 cursor-pointer"
+                      onClick={() => router.push("/profile")}
+                    >
+                      <img
+                        src={user.profilePic}
+                        alt={user.username}
+                        title={user.username}
+                        className="max-w-full w-[32px] h-[32px] rounded-full"
+                      />
+                      <span className="text-sm font-medium text-slate-700">
+                        {user.username}
+                      </span>
+                    </div>
+                  ) : (
+                    <Button
+                      btnText="Get Started"
+                      border="none"
+                      borderColor="white"
+                      backgroundColor="#80BBFF"
+                      fontColor="white"
+                      click={() => router.push("/login")}
+                    />
+                  )}
+
+                  {/* <Button btnText="Get Started" border="none" borderColor="white" backgroundColor="#80BBFF" fontColor="white" click={handleLogin} /> */}
+                </div>
               </div>
               {/*        <!-- End Avatar --> */}
             </div>
