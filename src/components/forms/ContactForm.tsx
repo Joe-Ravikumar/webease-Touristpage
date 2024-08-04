@@ -138,15 +138,15 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="relative flex items-top justify-center items-center  bg-white  sm:items-center sm:pt-0 mx-4 md:mx-0 mb-8">
+    <div className="relative flex items-top justify-center items-center  bg-transparent  sm:items-center sm:pt-0 mx-4 md:mx-0 mb-8">
       <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
         <div className="overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="p-6 md:mr-2 bg-[#80BBFF] w-full  sm:rounded-lg">
+          <div className="grid grid-cols-1 md:grid-cols-2 p-5">
+            <div className="p-6 md:mr-2 bg-gray-400 w-full  sm:rounded-lg">
               <h1 className="text-4xl sm:text-5xl text-[aliceblue]  font-extrabold tracking-tight">
                 Get in touch
               </h1>
-              <p className="text-normal text-lg sm:text-2xl font-medium text-[white] mt-2">
+              <p className="text-normal text-lg sm:text-2xl font-medium text-[white] mt-2 ">
                 Fill in the form to start a conversation
               </p>
 
@@ -178,7 +178,7 @@ const ContactForm: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-center mt-4 text-[white]">
+              <div className="flex items-center mt-4 text-[white] border-zinc-50">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -291,7 +291,7 @@ const ContactForm: React.FC = () => {
 
               <button
                 type="submit"
-                className="md:w-32 bg-[#80BBFF] hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-500 transition ease-in-out duration-300"
+                className="md:w-32 bg-gray-500 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-500 transition ease-in-out duration-300"
               >
                 Submit
               </button>

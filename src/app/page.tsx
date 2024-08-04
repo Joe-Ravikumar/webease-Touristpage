@@ -6,7 +6,6 @@ import CardTypeTwo from "@/components/cards/CardTypeTwo";
 import TwoLineTitle from "@/components/titles/TwoLineTitle";
 import cardData from "@/uiControllers/cardData.json";
 import InfoSectionTypeOne from "@/components/infoSection/InfoSectionTypeOne";
-import ContactForm from "@/components/forms/ContactForm";
 import GoogleMapComponent from "@/components/map/GoogleMap";
 import NumberSpringBanner from "@/components/banner/NumberSpringBanner";
 import worksData from "@/uiControllers/worksData.json";
@@ -46,11 +45,6 @@ export default function Home() {
         <div className="max-w-[1140px]">
           <CarosalTypeOne />
         </div>
-        <TwoLineTitle
-          main="Contact Us"
-          des="Explore our vibrant collection of artisanal goods and find the perfect piece to add a touch of elegance to your life."
-        />
-        <ContactForm />
         <GoogleMapComponent />
       </div>
     </>

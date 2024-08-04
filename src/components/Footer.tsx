@@ -8,9 +8,9 @@ const Footer: React.FC<FooterProps> = () => {
     return (
 <>
       {/*    <!-- Component: Dark Theme Footer --> */}
-      <footer className="w-full text-slate-400">
+      <footer className="w-full text-white">
         {/*      <!-- Main footer --> */}
-        <div className="pt-16 pb-12 text-sm border-t border-slate-900 bg-slate-800">
+        <div className="pt-16 pb-12 text-sm border-t border-white bg-sky-950">
           <div className="container px-6 mx-auto">
             <div className="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12">
               <nav
@@ -213,11 +213,11 @@ const Footer: React.FC<FooterProps> = () => {
           </div>
         </div>
         {/*      <!-- Sub Footer --> */}
-        <div className="py-4 text-sm border-t border-slate-900 bg-slate-700">
+        <div className="py-4 text-sm border-t border-slate-900 bg-sky-900">
           <div className="container px-6 mx-auto">
             <div className="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12">
               <div className="col-span-2 md:col-span-4 lg:col-span-6">
-                Copyright 2022 Brand
+                Copyright 2024 Brand
               </div>
               <nav
                 aria-labelledby="footer-social-links-dark"

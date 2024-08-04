@@ -38,10 +38,7 @@ const NumberSpringBanner: React.FC = () => {
 
   return (
     <div
-      className="w-full h-auto lg:h-[60vh] flex justify-center mt-8 bg-center bg-cover gradient-radial bg-fixed relative"
-      style={{
-        backgroundImage: "url('assets/images/bg/main-bg.webp')",
-      }}
+      className="w-full h-auto lg:h-[60vh] flex justify-center mt-8 bg-center bg-transparent gradient-radial bg-fixed relative"
     >
       <div className="absolute inset-0 bg-gradient-to-r from-[#8781DB] to-transparent"></div>
       <div className="w-full xl:w-[1140px] 2xl:w-[1440px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-x-8 gap-y-12 text-white text-xl py-8 z-10">

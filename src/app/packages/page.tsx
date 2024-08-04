@@ -7,7 +7,7 @@ import NumberSpringBanner from "@/components/banner/NumberSpringBanner";
 
 const Packages: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen ">
       <PageHeader
         title="Travel Packages"
         subtitle="Explore our exclusive travel packages tailored for every type of traveler"
@@ -31,7 +31,7 @@ const Packages: React.FC = () => {
           des="Dive deep into the local culture with our exclusive packages that offer a unique glimpse into the traditions and customs of the area."
           className="text-center mt-16 mb-8"
         />
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8 xl:w-[1140px] 2xl:w-[1440px] pb-8 mx-4 md:mx-8">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8 xl:w-[1140px] 2xl:w-[1440px] pb-8 mx-4 md:mx-8 bg-transparent">
           {services
             .filter((card) => card.category === "Cultural")
             .map((card, index) => (
@@ -50,10 +50,13 @@ const Packages: React.FC = () => {
               <CardTypeTwo key={index} {...card} />
             ))}
         </div>
-
-        <NumberSpringBanner />
       </div>
+      <div>
+      <NumberSpringBanner />
+      </div>
+      
     </div>
+    
   );
 };
 
