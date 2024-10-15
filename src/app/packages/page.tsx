@@ -1,11 +1,39 @@
+"use client";
 import PageHeader from "@/components/pageheaders/PageHeader";
 import TwoLineTitle from "@/components/titles/TwoLineTitle";
-import React from "react";
+import React, { useEffect } from "react";
 import services from "@/uiControllers/worksData.json";
 import CardTypeTwo from "@/components/cards/CardTypeTwo";
 import NumberSpringBanner from "@/components/banner/NumberSpringBanner";
+import { packages } from "@/services/actions/packages.services";
+import useMutation from "@/hooks/useMutation";
+import { useAppSelector } from "@/hooks/reduxHooks";
+import toast from "react-hot-toast";
 
 const Packages: React.FC = () => {
+  const userID = useAppSelector((state) => state.auth.userIdForVerification);
+  const { data, error, isLoading, mutate } = useMutation<any>(packages);
+
+  const fetchData = async () => {
+    await mutate({
+      userID,
+    });
+  };
+
+  useEffect(() => {
+    if (data) {
+      toast.success(data?.message);
+    }
+    if (error) {
+      toast.error(error);
+      console.error(error);
+    }
+  }, [data, error]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <div className="min-h-screen ">
       <PageHeader
@@ -52,11 +80,9 @@ const Packages: React.FC = () => {
         </div>
       </div>
       <div>
-      <NumberSpringBanner />
+        <NumberSpringBanner />
       </div>
-      
     </div>
-    
   );
 };
 
