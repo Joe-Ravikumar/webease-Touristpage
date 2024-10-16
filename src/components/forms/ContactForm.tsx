@@ -1,6 +1,7 @@
 "use client";
 import { useState, FormEvent, ChangeEvent } from "react";
 import emailjs from "emailjs-com";
+import { contactUs } from "@/app/actions/contact-us";
 
 interface FormData {
   name: string;
@@ -28,7 +29,7 @@ const ContactForm: React.FC = () => {
       tel: "",
       message: "",
     },
-    submissionStatus: ""
+    submissionStatus: "",
   });
 
   const validateInput = (name: string, value: string): string => {
@@ -64,7 +65,9 @@ const ContactForm: React.FC = () => {
     return error;
   };
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ): void => {
     const { name, value } = e.target;
     const error = validateInput(name, value);
     setFormData((prevState) => ({
@@ -77,63 +80,55 @@ const ContactForm: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const { name, email, tel, message } = formData;
     const errors = {
       name: validateInput("name", name),
       email: validateInput("email", email),
       tel: validateInput("tel", tel),
-      message: validateInput("message", message)
+      message: validateInput("message", message),
     };
 
     setFormData((prevState) => ({ ...prevState, errors }));
 
     if (!Object.values(errors).some((error) => error !== "")) {
-      emailjs
-        .sendForm(
-          "service_ixsgzrg",
-          "template_e5qjvmp",
-          e.currentTarget,
-          "qGOgpZPc-HUfCxxi8"
-        )
-        .then(
-          (result) => {
-            console.log("Email successfully sent!", result.text);
-            setFormData({
+      await contactUs(formData)
+        .then((result) => {
+          console.log("Email successfully sent!", result.success);
+          setFormData({
+            name: "",
+            email: "",
+            tel: "",
+            message: "",
+            errors: {
               name: "",
               email: "",
               tel: "",
               message: "",
-              errors: {
-                name: "",
-                email: "",
-                tel: "",
-                message: ""
-              },
-              submissionStatus: "success"
-            });
-            setTimeout(() => {
-              setFormData((prevState) => ({
-                ...prevState,
-                submissionStatus: ""
-              }));
-            }, 6000); // Hide status after 6 seconds
-          },
-          (error) => {
-            console.log("Failed to send the email:", error.text);
+            },
+            submissionStatus: "success",
+          });
+          setTimeout(() => {
             setFormData((prevState) => ({
               ...prevState,
-              submissionStatus: "error"
+              submissionStatus: "",
             }));
-            setTimeout(() => {
-              setFormData((prevState) => ({
-                ...prevState,
-                submissionStatus: ""
-              }));
-            }, 6000); // Hide status after 6 seconds
-          }
-        );
+          }, 6000); // Hide status after 6 seconds
+        })
+        .catch((error) => {
+          console.log("Failed to send the email:", error.text);
+          setFormData((prevState) => ({
+            ...prevState,
+            submissionStatus: "error",
+          }));
+          setTimeout(() => {
+            setFormData((prevState) => ({
+              ...prevState,
+              submissionStatus: "",
+            }));
+          }, 6000); // Hide status after 6 seconds
+        });
     }
   };
 
